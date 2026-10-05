@@ -1,0 +1,61 @@
+{
+  "experiment": "phase_shift",
+  "label": "Measured locally on synthetic workload",
+  "workload": {
+    "type": "phase_shift",
+    "seed": 42,
+    "synthetic": true,
+    "shift_at": 5000
+  },
+  "num_objects": 1000,
+  "num_queries": 10000,
+  "dataset_bytes": 306862864,
+  "policies": {
+    "LRU": {
+      "policy": "LRU",
+      "queries": 10000,
+      "p50_ms": 0.1,
+      "p95_ms": 62.6522,
+      "p99_ms": 75.7803,
+      "mean_ms": 15.088525169999999,
+      "hit_ratio": 0.6652,
+      "remote_requests": 3348,
+      "remote_bytes": 997456865,
+      "evictions": 3283,
+      "max_used_bytes": 18411710,
+      "capacity_bytes": 18411771,
+      "phase_shift": {
+        "pre_shift_hit_ratio": 0.6605,
+        "post_shift_steady_hit_ratio": 0.6605,
+        "first_window_after_shift_hit_ratio": 0.605,
+        "recovery_target_hit_ratio": 0.6274749999999999,
+        "recovery_queries": 206,
+        "rolling_window": 200
+      }
+    },
+    "LancePilot": {
+      "policy": "LancePilot",
+      "queries": 10000,
+      "p50_ms": 0.1,
+      "p95_ms": 58.0507,
+      "p99_ms": 73.6881,
+      "mean_ms": 11.32439814,
+      "hit_ratio": 0.7435,
+      "remote_requests": 2565,
+      "remote_bytes": 826490997,
+      "evictions": 2384,
+      "max_used_bytes": 18411509,
+      "capacity_bytes": 18411771,
+      "rejected_admissions": 109,
+      "phase_shift": {
+        "pre_shift_hit_ratio": 0.7425,
+        "post_shift_steady_hit_ratio": 0.7535,
+        "first_window_after_shift_hit_ratio": 0.55,
+        "recovery_target_hit_ratio": 0.705375,
+        "recovery_queries": 266,
+        "rolling_window": 200
+      }
+    }
+  },
+  "capacity_bytes": 18411771
+}

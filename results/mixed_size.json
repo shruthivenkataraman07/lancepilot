@@ -1,0 +1,44 @@
+{
+  "experiment": "mixed_size",
+  "label": "Measured locally on synthetic workload",
+  "workload": {
+    "type": "zipf",
+    "seed": 7,
+    "synthetic": true
+  },
+  "num_objects": 5000,
+  "num_queries": 50000,
+  "dataset_bytes": 2602819274,
+  "policies": {
+    "LRU": {
+      "policy": "LRU",
+      "queries": 50000,
+      "p50_ms": 21.3884,
+      "p95_ms": 104.74458499999989,
+      "p99_ms": 135.8699,
+      "mean_ms": 31.68435259,
+      "hit_ratio": 0.43208,
+      "remote_requests": 28396,
+      "remote_bytes": 14865380680,
+      "evictions": 28140,
+      "max_used_bytes": 130140962,
+      "capacity_bytes": 130140963
+    },
+    "LancePilot": {
+      "policy": "LancePilot",
+      "queries": 50000,
+      "p50_ms": 0.1,
+      "p95_ms": 98.1083,
+      "p99_ms": 132.3122,
+      "mean_ms": 23.788665008,
+      "hit_ratio": 0.56118,
+      "remote_requests": 21941,
+      "remote_bytes": 14059485399,
+      "evictions": 16484,
+      "max_used_bytes": 130140952,
+      "capacity_bytes": 130140963,
+      "rejected_admissions": 4870
+    }
+  },
+  "capacity_bytes": 130140963
+}
