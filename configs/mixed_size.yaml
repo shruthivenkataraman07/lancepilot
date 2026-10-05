@@ -1,0 +1,20 @@
+# Experiment B: mixed object sizes + Zipf access (synthetic).
+name: mixed_size
+workload:
+  type: zipf
+  seed: 7
+  num_objects: 5000
+  num_queries: 50000
+  zipf_s: 0.9
+objects:
+  size_median_kb: 256
+  size_sigma: 1.2
+  num_partitions: 16
+  partition_latency_ms: [10, 120]
+  bandwidth_mb_s: 100
+cache:
+  capacity_fraction: 0.05
+  hit_latency_ms: 0.1
+lancepilot:
+  alpha: 0.001
+  epsilon: 0.05
